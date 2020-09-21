@@ -153,6 +153,7 @@ DISABLE_RILD_OEM_HOOK := true
 #    device/qcom/sepolicy/generic/public \
 #    device/qcom/sepolicy/qva/public
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy-minimal
+
 # Power
 TARGET_USES_INTERACTION_BOOST := true
 TARGET_TAP_TO_WAKE_NODE := "/dev/input/event3"
