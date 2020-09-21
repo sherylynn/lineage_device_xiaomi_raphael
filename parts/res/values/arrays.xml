@@ -113,6 +113,7 @@
     </string-array>
 
     <string-array name="popupcamera_effects_entries">
+        <item>@string/action_none</item>
         <item>@string/popup_title_muqin</item>
         <item>@string/popup_title_yingyan</item>
         <item>@string/popup_title_mofa</item>
