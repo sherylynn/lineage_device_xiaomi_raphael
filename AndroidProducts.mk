@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/potato_raphael.mk
+    $(LOCAL_DIR)/corvus_raphael.mk
 
 COMMON_LUNCH_CHOICES := \
-    potato_raphael-user \
-    potato_raphael-userdebug \
-    potato_raphael-eng
+    corvus_raphael-user \
+    corvus_raphael-userdebug \
+    corvus_raphael-eng

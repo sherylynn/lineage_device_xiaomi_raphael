@@ -7,7 +7,7 @@
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
 # Inherit some common POTATO stuff.
-$(call inherit-product, vendor/potato/config/common_full_phone.mk)
+$(call inherit-product, vendor/corvus/config/common_full_phone.mk)
 
 # Inherit PSU
 $(call inherit-product-if-exists, vendor/google/psu/google-psu.mk)
@@ -16,7 +16,7 @@ $(call inherit-product-if-exists, vendor/google/psu/google-psu.mk)
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := raphael
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := potato_raphael
+PRODUCT_NAME := corvus_raphael
 
 BUILD_FINGERPRINT := "Xiaomi/raphaelin/raphaelin:9/PKQ1.181121.001/V10.3.3.0.PFKINXM:user/release-keys"
 
