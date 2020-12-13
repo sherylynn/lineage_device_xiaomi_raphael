@@ -33,26 +33,13 @@ void property_override(char const prop[], char const value[]) {
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-void load_dalvik_properties() {
-    struct sysinfo sys;
-
-    sysinfo(&sys);
-    if (sys.totalram < 6144ull * 1024 * 1024) {
-        // from - phone-xhdpi-6144-dalvik-heap.mk
-        property_override("dalvik.vm.heapstartsize", "16m");
-        property_override("dalvik.vm.heapgrowthlimit", "256m");
-        property_override("dalvik.vm.heapsize", "512m");
-        property_override("dalvik.vm.heapmaxfree", "32m");
-    } else {
-        // 8GB & 12GB RAM
-        property_override("dalvik.vm.heapstartsize", "32m");
-        property_override("dalvik.vm.heapgrowthlimit", "512m");
-        property_override("dalvik.vm.heapsize", "768m");
-        property_override("dalvik.vm.heapmaxfree", "64m");
-    }
-
-    property_override("dalvik.vm.heaptargetutilization", "0.5");
-    property_override("dalvik.vm.heapminfree", "8m");
+void property_override_multifp(char const buildfp[], char const systemfp[],
+	char const bootimagefp[], char const vendorfp[], char const value[])
+{
+	property_override(buildfp, value);
+	property_override(systemfp, value);
+	property_override(bootimagefp, value);
+	property_override(vendorfp, value);
 }
 
 void load_raphaelglobal() {
@@ -76,6 +63,27 @@ void load_raphael() {
     property_override("ro.build.description", "coral-user 11 RP1A.201105.002 6869500 release-keys");
 }
 
+void load_dalvik_properties() {
+    struct sysinfo sys;
+
+    sysinfo(&sys);
+    if (sys.totalram < 6144ull * 1024 * 1024) {
+        // from - phone-xhdpi-6144-dalvik-heap.mk
+        property_override("dalvik.vm.heapstartsize", "16m");
+        property_override("dalvik.vm.heapgrowthlimit", "256m");
+        property_override("dalvik.vm.heapsize", "512m");
+        property_override("dalvik.vm.heapmaxfree", "32m");
+    } else {
+        // 8GB & 12GB RAM
+        property_override("dalvik.vm.heapstartsize", "32m");
+        property_override("dalvik.vm.heapgrowthlimit", "512m");
+        property_override("dalvik.vm.heapsize", "768m");
+        property_override("dalvik.vm.heapmaxfree", "64m");
+    }
+
+    property_override("dalvik.vm.heaptargetutilization", "0.5");
+    property_override("dalvik.vm.heapminfree", "8m");
+}
 
 void vendor_load_properties() {
     std::string region = android::base::GetProperty("ro.boot.hwc", "");
@@ -90,6 +98,7 @@ void vendor_load_properties() {
         LOG(ERROR) << __func__ << ": unexcepted region!";
     }
 	property_override("ro.oem_unlock_supported", "0");
-    property_override("ro.build.fingerprint", "google/coral/coral:11/RP1A.201105.002/6869500:user/release-keys");
+	property_override_multifp("ro.build.fingerprint", "ro.system.build.fingerprint", "ro.bootimage.build.fingerprint",
+	    "ro.vendor.build.fingerprint", "google/redfin/redfin:11/RQ1A.201205.010/6953398:user/release-keys");
     load_dalvik_properties();
 }
