@@ -89,6 +89,7 @@ void vendor_load_properties() {
     } else {
         LOG(ERROR) << __func__ << ": unexcepted region!";
     }
+	property_override("ro.oem_unlock_supported", "0");
     property_override("ro.build.fingerprint", "google/coral/coral:11/RP1A.201105.002/6869500:user/release-keys");
     load_dalvik_properties();
 }
