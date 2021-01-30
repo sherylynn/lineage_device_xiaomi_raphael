@@ -12,10 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/du_raphael.mk
+PROlineageCT_MAKEFILES := \
+    $(LOCAL_DIR)/lineage_raphael.mk
 
 COMMON_LUNCH_CHOICES := \
-    du_raphael-user \
-    du_raphael-userdebug \
-    du_raphael-eng
+    lineage_raphael-user \
+    lineage_raphael-userdebug \
+    lineage_raphael-eng
