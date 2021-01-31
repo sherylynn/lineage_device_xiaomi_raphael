@@ -10,10 +10,4 @@
     "branch"     : "10",
     "remote"     : "github"
   },
-  {
-    "repository" : "sashascurtu/vendor_ANXCamera",
-    "target_path": "vendor/ANXCamera",
-    "branch"     : "raphael-v185",
-    "remote"     : "github"
-  },
 ]

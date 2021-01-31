@@ -19,7 +19,7 @@ $(call inherit-product, device/xiaomi/raphael/msmnile.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from ANXCamera vendor.
-$(call inherit-product, vendor/ANXCamera/config.mk)
+#$(call inherit-product, vendor/ANXCamera/config.mk)
 
 TARGET_GAPPS_ARCH := arm64
 
