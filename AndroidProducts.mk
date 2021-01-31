@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PROlineageCT_MAKEFILES := \
+PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_raphael.mk
 
 COMMON_LUNCH_CHOICES := \
