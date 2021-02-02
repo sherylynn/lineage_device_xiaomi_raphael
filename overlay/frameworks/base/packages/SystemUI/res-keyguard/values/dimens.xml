@@ -14,8 +14,8 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <resources>
-    <!-- The minimum bottom margin of the keyguard security container -->
-    <dimen name="kg_security_container_min_bottom_margin">505px</dimen>
+    <!-- Max Height of the sliding KeyguardSecurityContainer
+         (includes 2x keyguard_security_view_top_margin) -->
+    <dimen name="keyguard_security_max_height">550dp</dimen>
 </resources>

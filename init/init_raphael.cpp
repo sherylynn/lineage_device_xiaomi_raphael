@@ -89,8 +89,8 @@ void vendor_load_properties()
     }
 
     // fingerprint
-    property_override("ro.build.description", "redfin-user 11 RQ1A.201205.010 6953398 release-keys");
-    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/redfin/redfin:11/RQ1A.201205.010/6953398:user/release-keys");
+    property_override("ro.build.description", "raphael-user 10 QKQ1.190825.002 V12.0.1.0.QFKMIXM release-keys");
+    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
 
     load_dalvikvm_properties();
 }
