@@ -1,4 +1,4 @@
-# Copyright (C) 2020 Lineage ROM
+# Copyright (C) 2020 LineageOS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/xiaomi/raphael/msmnile.mk)
 
-# Inherit some common Lineage stuff.
+# Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from ANXCamera vendor.
@@ -30,12 +30,13 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi K20 Pro
 PRODUCT_MANUFACTURER := Xiaomi
 
+# Boot animation configuration
+TARGET_SCREEN_HEIGHT := 2340
+TARGET_SCREEN_WIDTH := 1080
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="raphael" \
     TARGET_DEVICE="raphael"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-# Lineage stuff
-TARGET_BOOT_ANIMATION_RES := 1080x2340
-EXTRA_FOD_ANIMATIONS := true
