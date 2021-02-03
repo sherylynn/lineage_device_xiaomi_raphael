@@ -21,7 +21,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="raphael" \
     TARGET_DEVICE="raphael"
 
-BUILD_FINGERPRINT := "google/walleye/walleye:9/PQ2A.190405.003/5310204:user/release-keys"
+#BUILD_FINGERPRINT := "google/walleye/walleye:9/PQ2A.190405.003/5310204:user/release-keys"
 
 MARU_VERSION := 0.8-test
 MARU_BUILD_VERSION := $(MARU_VERSION)-$(shell date -u +%Y%m%d)
